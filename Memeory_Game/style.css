@@ -1,0 +1,23 @@
+h1 {
+  text-align: center;
+}
+
+main {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 15px;
+}
+
+div {
+  background-color: red;
+  height: 50px;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
