@@ -1,14 +1,52 @@
-//Global Variables
+//------------------------------------------------------- Global Variables -------------------------------------------------------//
 const gameGrid = document.querySelectorAll('div')
 console.log(gameGrid)
 
-console.log(gameGrid[1])
+const button = document.querySelector('button')
+console.log(button)
 
-let turn = 0
-let i = 0
-// Game logic
+array = ['image1', 'imag1', 'image2', 'image2']
 
-const revealCard = (selection) => {}
+//-------------------------------------------------- Global array and randomizer -------------------------------------------------------//
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    // Swap array[i] and array[j]
+    ;[array[i], array[j]] = [array[j], array[i]]
+  }
+}
+
+shuffleArray(array)
+
+console.log(array)
+
+//---------------------------------------------------------- Game Logic-------------------------------------------------------//
+
+// const revealCard = (selection) => {
+//   // console.log('samp')
+//   for (let i = 0; i < array.length; i++) {
+//     console.log(array[i])
+//     selection.target.classList.add(array[i])
+//   }
+// }
+
+const startGame = () => {
+  gameGrid.forEach((el, i) => {
+    console.log(el)
+    el.classList.add(array[i])
+  })
+}
+
+//-------------------------------------------------- Listening to the events -------------------------------------------------------//
+
+button.addEventListener('click', startGame)
+
+// gameGrid.forEach((grid) => {
+//   grid.addEventListener('click', revealCard)
+// })
+
+// waste code
 
 // const revealCard = (selection) => {
 //   turn++
@@ -30,9 +68,3 @@ const revealCard = (selection) => {}
 //     console.log(turn)
 //   }
 // }
-
-//Event listeners here
-
-gameGrid.forEach((grid) => {
-  grid.addEventListener('click', revealCard)
-})

@@ -14,10 +14,22 @@ div {
   height: 50px;
 }
 
-.blue {
+.samp {
   background-color: blue;
 }
 
-.green {
+.crank {
   background-color: green;
+}
+
+body {
+  text-align: center;
+}
+
+button {
+  margin: 50px;
+}
+
+.black {
+  background-color: black;
 }
