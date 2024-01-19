@@ -1,6 +1,12 @@
-//------------------------------------------------------- Global Variables -------------------------------------------------------//
+//------------------------------------------------------- Global Variables ---------------------------------------------------------------//
 const gameGrid = document.querySelectorAll('div')
 const button = document.querySelector('button')
+
+//------------------------------------------------------- User Inputs and selection  ----------------------------------------------------------//
+
+//------------------------------------------------------- Collection of images---------------------------------------------------------------//
+
+//------------------------------------------------------- Main Array to push images to ------------------------------------------------------//
 
 array = [
   'image1',
@@ -49,10 +55,11 @@ const removeClass = (selection) => {
         revertBlack(divArr)
         playAgain()
       }, 2000)
-      console.log(arr)
       arr = []
     } else {
       arr = []
+      //VV in order to clear only the latest selection VV extra game mode
+      divArr = []
     }
   } else {
   }
@@ -65,12 +72,13 @@ const playAgain = () => {
 }
 
 const revertBlack = (params) => {
+  console.log(params)
   params.forEach((param) => {
     param.classList.add('black')
   })
 }
 
-//-------------------------------------------------- Listening to the events -------------------------------------------------------//
+//-------------------------------------------------- Event listeners -------------------------------------------------------//
 
 button.addEventListener('click', startGame)
 
