@@ -4,6 +4,8 @@ h1 {
 
 main {
   display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows with equal height */
   align-items: center;
   justify-content: center;
   grid-gap: 15px;
@@ -14,12 +16,20 @@ div {
   height: 50px;
 }
 
-.samp {
+.image1 {
   background-color: blue;
 }
 
-.crank {
+.image2 {
   background-color: green;
+}
+
+.image3 {
+  background-color: rgb(251, 255, 0);
+}
+
+.image4 {
+  background-color: rgb(128, 0, 79);
 }
 
 body {

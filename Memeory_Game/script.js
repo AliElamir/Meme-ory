@@ -1,12 +1,21 @@
 //------------------------------------------------------- Global Variables -------------------------------------------------------//
 const gameGrid = document.querySelectorAll('div')
-console.log(gameGrid)
-
 const button = document.querySelector('button')
-console.log(button)
 
-array = ['image1', 'imag1', 'image2', 'image2']
+array = [
+  'image1',
+  'image1',
+  'image2',
+  'image2',
+  'image3',
+  'image3',
+  'image4',
+  'image4'
+]
 
+let arr = []
+
+let divArr = []
 //-------------------------------------------------- Global array and randomizer -------------------------------------------------------//
 
 function shuffleArray(array) {
@@ -19,22 +28,45 @@ function shuffleArray(array) {
 
 shuffleArray(array)
 
-console.log(array)
-
 //---------------------------------------------------------- Game Logic-------------------------------------------------------//
-
-// const revealCard = (selection) => {
-//   // console.log('samp')
-//   for (let i = 0; i < array.length; i++) {
-//     console.log(array[i])
-//     selection.target.classList.add(array[i])
-//   }
-// }
 
 const startGame = () => {
   gameGrid.forEach((el, i) => {
-    console.log(el)
     el.classList.add(array[i])
+  })
+}
+
+const removeClass = (selection) => {
+  selection.target.classList.remove('black')
+  divArr.push(selection.target)
+  arr.push(selection.target.classList)
+  if (arr.length === 2) {
+    if (arr[0].value !== arr[1].value) {
+      gameGrid.forEach((el) => {
+        el.removeEventListener('click', removeClass)
+      })
+      setTimeout(() => {
+        revertBlack(divArr)
+        playAgain()
+      }, 2000)
+      console.log(arr)
+      arr = []
+    } else {
+      arr = []
+    }
+  } else {
+  }
+}
+
+const playAgain = () => {
+  gameGrid.forEach((el) => {
+    el.addEventListener('click', removeClass)
+  })
+}
+
+const revertBlack = (params) => {
+  params.forEach((param) => {
+    param.classList.add('black')
   })
 }
 
@@ -42,29 +74,6 @@ const startGame = () => {
 
 button.addEventListener('click', startGame)
 
-// gameGrid.forEach((grid) => {
-//   grid.addEventListener('click', revealCard)
-// })
-
-// waste code
-
-// const revealCard = (selection) => {
-//   turn++
-//   if (turn < 3) {
-//     let selection1 = selection.target.classList.add('blue')
-//     selection1
-//   } else {
-//     if (
-//       gameGrid[0].classList.contains('blue') &&
-//       gameGrid[1].classList.contains('blue')
-//     ) {
-//       console.log('keep them revealed')
-//     } else {
-//       const hideCard = () => {
-//         selection.target.classList.remove('blue')
-//       }
-//       setTimeout(hideCard, 1000)
-//     }
-//     console.log(turn)
-//   }
-// }
+gameGrid.forEach((grid) => {
+  grid.addEventListener('click', removeClass)
+})
