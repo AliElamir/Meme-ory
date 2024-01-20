@@ -68,6 +68,34 @@ button {
   background-repeat: no-repeat;
 }
 
+.animal1 {
+  background-image: url('https://lafeber.com/pet-birds/wp-content/uploads/2018/06/Cockatiel-2.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.animal2 {
+  background-image: url('https://i.pinimg.com/originals/bb/8d/55/bb8d553a3f42b99208ea14d07d6aa05a.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.animal3 {
+  background-image: url('https://i.redd.it/xh4xvvx22yt41.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.animal4 {
+  background-image: url('https://hips.hearstapps.com/hmg-prod/images/chipmunk-nature-photos-1537973822.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .black {
   background-color: black;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/68/Solid_black.png?20060513000051');

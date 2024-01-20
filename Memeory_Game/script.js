@@ -4,11 +4,14 @@ const button = document.querySelector('button')
 
 //------------------------------------------------------- User Inputs and selection  ----------------------------------------------------------//
 
-let themeChoice = 0
+let themeChoice = 2
 
 let difficulty = 0
 
+let userTime = 0
+
 //------------------------------------------------------- Collection of images---------------------------------------------------------------//
+let collection = []
 
 let collectionShrek = [
   'shrek1',
@@ -21,6 +24,26 @@ let collectionShrek = [
   'shrek4'
 ]
 
+let collectionAnimals = [
+  'animal1',
+  'animal2',
+  'animal3',
+  'animal4',
+  'animal1',
+  'animal2',
+  'animal3',
+  'animal4'
+]
+let collectionColors = [
+  'image1',
+  'image2',
+  'image3',
+  'image4',
+  'image1',
+  'image2',
+  'image3',
+  'image4'
+]
 //------------------------------------------------------- Main Array to push images to ------------------------------------------------------//
 
 array = []
@@ -38,12 +61,21 @@ function shuffleArray(array) {
   }
 }
 
-shuffleArray(collectionShrek)
+// shuffleArray(collectionShrek)
 //---------------------------------------------------------- Game Logic-------------------------------------------------------//
 
 // adds the shuffled array as classes into each div //
 const addImgs = () => {
-  array.push(...collectionShrek)
+  if (themeChoice === 1) {
+    shuffleArray(collectionShrek)
+    array.push(...collectionShrek)
+  } else if (themeChoice === 2) {
+    shuffleArray(collectionAnimals)
+    array.push(...collectionAnimals)
+  } else {
+    shuffleArray(collectionColors)
+    array.push(...collectionColors)
+  }
 }
 
 const startGame = () => {

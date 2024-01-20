@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: red;
+}
+
+#themeSelection {
+  display: flex;
+  justify-content: space-around;
+  margin: 20%;
+}
+
+.themes {
+  background-color: pink;
+  height: 100px;
+  width: 15%;
+}
+
+#diffSelection {
+  display: flex;
+  justify-content: space-around;
+  margin: 20%;
+}
+
+.difficulty {
+  background-color: dodgerblue;
+  height: 100px;
+  width: 15%;
+}
