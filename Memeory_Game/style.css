@@ -12,8 +12,8 @@ main {
 }
 
 div {
-  background-color: red;
-  height: 50px;
+  background-color: white;
+  height: 300px;
 }
 
 .image1 {
@@ -40,6 +40,35 @@ button {
   margin: 50px;
 }
 
+.shrek1 {
+  background-image: url('https://image.tmdb.org/t/p/original/wdl6lNh4paMzu3LrfKRN7JnAVQ4.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.shrek2 {
+  background-image: url('https://image.tmdb.org/t/p/original/2yYP0PQjG8zVqturh1BAqu2Tixl.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.shrek3 {
+  background-image: url('https://m.media-amazon.com/images/I/518PhXkeWxL._AC_UF894,1000_QL80_.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.shrek4 {
+  background-image: url('https://xl.movieposterdb.com/11_08/2003/360985/xl_360985_9cdb7c1a.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .black {
   background-color: black;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/68/Solid_black.png?20060513000051');
 }
