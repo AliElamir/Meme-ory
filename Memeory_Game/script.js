@@ -4,7 +4,7 @@ const button = document.querySelector('button')
 
 //------------------------------------------------------- User Inputs and selection  ----------------------------------------------------------//
 
-let themeChoice = 2
+let themeChoice = theme
 
 let difficulty = 0
 
