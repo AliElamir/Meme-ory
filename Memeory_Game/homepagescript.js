@@ -17,7 +17,7 @@ let dif = 0
 
 //user chooses the theme//
 
-userThemeChoice = (choices) => {
+function userThemeChoice(choices) {
   console.log('helo')
   if (choices.target.id === 't1') {
     theme = 1
@@ -34,11 +34,12 @@ userThemeChoice = (choices) => {
   } else {
     theme = 0
   }
+  localStorage.setItem('theme', theme)
 }
 
 //user chooses the difficulty//
 
-difficultyChoice = (choices) => {
+function difficultyChoice(choices) {
   console.log('difficult in the sense')
   if (choices.target.id === 'd1') {
     dif = 1
@@ -63,3 +64,5 @@ userTheme.forEach((el) => {
 userDifficulty.forEach((difficulty) => {
   difficulty.addEventListener('click', difficultyChoice)
 })
+
+//----------------------------------------------------------------------------------------------------------------------------------//

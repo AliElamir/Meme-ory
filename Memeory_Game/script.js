@@ -1,10 +1,16 @@
+const storedRandomNumber = localStorage.getItem('theme')
+
+console.log(storedRandomNumber)
+
 //------------------------------------------------------- Global Variables ---------------------------------------------------------------//
 const gameGrid = document.querySelectorAll('div')
 const button = document.querySelector('button')
 
 //------------------------------------------------------- User Inputs and selection  ----------------------------------------------------------//
 
-let themeChoice = theme
+let themeChoice = parseInt(storedRandomNumber)
+
+console.log(themeChoice)
 
 let difficulty = 0
 
@@ -46,13 +52,14 @@ let collectionColors = [
 ]
 //------------------------------------------------------- Main Array to push images to ------------------------------------------------------//
 
-array = []
+let array = []
 
 let arr = []
 
 let divArr = []
 //-------------------------------------------------- Global array and randomizer -------------------------------------------------------//
 
+// referred from internet
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
@@ -79,6 +86,7 @@ const addImgs = () => {
 }
 
 const startGame = () => {
+  console.log('asdf')
   addImgs()
   gameGrid.forEach((el, i) => {
     el.classList.add(array[i])
@@ -131,7 +139,10 @@ const revertBlack = (params) => {
 
 //-------------------------------------------------- Event listeners -------------------------------------------------------//
 
-button.addEventListener('click', startGame)
+// referred from internet
+document.addEventListener('DOMContentLoaded', () => {
+  startGame()
+})
 
 gameGrid.forEach((grid) => {
   grid.addEventListener('click', removeClass)
