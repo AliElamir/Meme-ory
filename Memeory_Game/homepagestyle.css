@@ -11,7 +11,7 @@ h1 {
 #themeSelection {
   display: flex;
   justify-content: space-around;
-  margin: 20%;
+  margin: 10%;
 }
 
 .themes {
@@ -20,13 +20,13 @@ h1 {
   width: 15%;
 }
 
-#diffSelection {
+#sizeSelection {
   display: flex;
   justify-content: space-around;
-  margin: 20%;
+  margin: 10%;
 }
 
-.difficulty {
+.size {
   background-color: dodgerblue;
   height: 100px;
   width: 15%;

@@ -4,14 +4,14 @@ const userTheme = document.querySelectorAll('.themes')
 
 console.log(userTheme)
 
-const userDifficulty = document.querySelectorAll('.difficulty')
+const userSize = document.querySelectorAll('.size')
 
-console.log(userDifficulty)
+console.log(userSize)
 
 //------------------------------------------------------- User Inputs and selection  ----------------------------------------------------------//
 
 let theme = 0
-let dif = 0
+let size = 0
 
 //------------------------------------------------------- functions  ----------------------------------------------------------//
 
@@ -37,32 +37,56 @@ function userThemeChoice(choices) {
   localStorage.setItem('theme', theme)
 }
 
-//user chooses the difficulty//
-
-function difficultyChoice(choices) {
-  console.log('difficult in the sense')
+//user chooses the grid size//
+// arrow function notation was not working. Why?//
+function sizeChoice(choices) {
+  console.log('size in the sense')
   if (choices.target.id === 'd1') {
-    dif = 1
-    console.log(dif)
+    size = 0
+    console.log(size)
   } else if (choices.target.id === 'd2') {
-    dif = 2
-    console.log(dif)
+    size = 2
+    console.log(size)
   } else if (choices.target.id === 'd3') {
-    dif = 3
-    console.log(dif)
+    size = 4
+    console.log(size)
   } else {
-    dif = 0
+    size = 0
   }
+  localStorage.setItem('size', size)
 }
 
 //------------------------------------------------------- event handlers  ----------------------------------------------------------//
 
-userTheme.forEach((el) => {
-  el.addEventListener('click', userThemeChoice)
+userTheme.forEach((themes) => {
+  themes.addEventListener('click', userThemeChoice)
 })
 
-userDifficulty.forEach((difficulty) => {
-  difficulty.addEventListener('click', difficultyChoice)
+userSize.forEach((sizes) => {
+  sizes.addEventListener('click', sizeChoice)
 })
 
 //----------------------------------------------------------------------------------------------------------------------------------//
+
+// let collection = []
+
+// let collectionShrek = [
+//   'shrek1',
+//   'shrek2',
+//   'shrek3',
+//   'shrek4',
+//   'shrek5',
+//   'shrek6'
+// ]
+
+// const shrekTest = (x, y) => {
+//   for (let i = 0; i < 2; i++) {
+//     for (let j = 0; j < 4 + gridSize; j++) {
+//       collection.push(y[j])
+//     }
+//   }
+// }
+
+// shrekTest(gridSize, collectionShrek)
+
+// console.log(collection)

@@ -1,22 +1,28 @@
-const storedRandomNumber = localStorage.getItem('theme')
+//------------------------------------------------------- Importing variables from homepage (user selection)---------------------------------------------------------------//
 
-console.log(storedRandomNumber)
+const exportedTheme = localStorage.getItem('theme')
+
+console.log(exportedTheme)
+
+const exportedSize = localStorage.getItem('size')
+
+console.log(exportedSize)
 
 //------------------------------------------------------- Global Variables ---------------------------------------------------------------//
-const gameGrid = document.querySelectorAll('div')
+
 const button = document.querySelector('button')
+const main = document.querySelector('main')
+let gameGrid = document.querySelectorAll('div')
 
 //------------------------------------------------------- User Inputs and selection  ----------------------------------------------------------//
 
-let themeChoice = parseInt(storedRandomNumber)
+let themeChoice = parseInt(exportedTheme)
 
-console.log(themeChoice)
-
-let difficulty = 0
+let gridSize = parseInt(exportedSize)
 
 let userTime = 0
 
-//------------------------------------------------------- Collection of images---------------------------------------------------------------//
+//------------------------------------------------------- Themes (Collection of images)---------------------------------------------------------------//
 let collection = []
 
 let collectionShrek = [
@@ -40,6 +46,11 @@ let collectionAnimals = [
   'animal3',
   'animal4'
 ]
+
+let collectionAnimals4x3 = ['animal5', 'animal5', 'animal6', 'animal6']
+
+let collectionAnimals4x4 = ['animal7', 'animal7', 'animal8', 'animal8']
+
 let collectionColors = [
   'image1',
   'image2',
@@ -71,23 +82,95 @@ function shuffleArray(array) {
 // shuffleArray(collectionShrek)
 //---------------------------------------------------------- Game Logic-------------------------------------------------------//
 
+//user chooses the grid size//
+
+const addGrids = () => {
+  if (gridSize == 0) {
+    console.log('grid size is 1')
+  } else if (gridSize == 2) {
+    //4x3 grid
+    for (let i = 0; i < 4; i++) {
+      const gridElements = document.createElement('div')
+      main.appendChild(gridElements)
+      gridElements.classList.add('black')
+    }
+  } else if (gridSize == 4) {
+    //4x3 grid
+    for (let i = 0; i < 8; i++) {
+      const gridElements = document.createElement('div')
+      main.appendChild(gridElements)
+      gridElements.classList.add('black')
+    }
+  } else {
+    console.log('grid size is 1')
+  }
+}
+
 // adds the shuffled array as classes into each div //
 const addImgs = () => {
   if (themeChoice === 1) {
-    shuffleArray(collectionShrek)
-    array.push(...collectionShrek)
+    if (gridSize == 0) {
+      array.push(...collectionAnimals)
+      shuffleArray(array)
+    } else if (gridSize == 2) {
+      array.push(...collectionAnimals)
+      array.push(...collectionAnimals4x3)
+      shuffleArray(array)
+    } else if (gridSize == 4) {
+      array.push(...collectionAnimals)
+      array.push(...collectionAnimals4x3)
+      array.push(...collectionAnimals4x4)
+      shuffleArray(array)
+    }
   } else if (themeChoice === 2) {
-    shuffleArray(collectionAnimals)
-    array.push(...collectionAnimals)
+    if (gridSize == 0) {
+      array.push(...collectionAnimals)
+      shuffleArray(array)
+    } else if (gridSize == 2) {
+      array.push(...collectionAnimals)
+      array.push(...collectionAnimals4x3)
+      shuffleArray(array)
+    } else if (gridSize == 4) {
+      array.push(...collectionAnimals)
+      array.push(...collectionAnimals4x3)
+      array.push(...collectionAnimals4x4)
+      shuffleArray(array)
+    }
+  } else if (themeChoice === 3) {
+    if (gridSize == 0) {
+      array.push(...collectionAnimals)
+      shuffleArray(array)
+    } else if (gridSize == 2) {
+      array.push(...collectionAnimals)
+      array.push(...collectionAnimals4x3)
+      shuffleArray(array)
+    } else if (gridSize == 4) {
+      array.push(...collectionAnimals)
+      array.push(...collectionAnimals4x3)
+      array.push(...collectionAnimals4x4)
+      shuffleArray(array)
+    }
   } else {
-    shuffleArray(collectionColors)
-    array.push(...collectionColors)
+    if (gridSize == 0) {
+      array.push(...collectionAnimals)
+      shuffleArray(array)
+    } else if (gridSize == 2) {
+      array.push(...collectionAnimals)
+      array.push(...collectionAnimals4x3)
+      shuffleArray(array)
+    } else if (gridSize == 4) {
+      array.push(...collectionAnimals)
+      array.push(...collectionAnimals4x3)
+      array.push(...collectionAnimals4x4)
+      shuffleArray(array)
+    }
   }
 }
 
 const startGame = () => {
-  console.log('asdf')
+  addGrids()
   addImgs()
+  gameGrid = document.querySelectorAll('div')
   gameGrid.forEach((el, i) => {
     el.classList.add(array[i])
   })
@@ -102,13 +185,13 @@ const removeClass = (selection) => {
     if (arr.length === 2) {
       if (arr[0].value !== arr[1].value) {
         gameGrid.forEach((el) => {
-          //removed event listener from all the divs so user cant click on other divs while it shows their selection
+          //remove event listener from all the divs so user cant click on other divs while it shows their selection
           el.removeEventListener('click', removeClass)
         })
         setTimeout(() => {
           revertBlack(divArr)
           playAgain()
-        }, 2000)
+        }, 1000)
         arr = []
       } else {
         arr = []
@@ -142,6 +225,7 @@ const revertBlack = (params) => {
 // referred from internet
 document.addEventListener('DOMContentLoaded', () => {
   startGame()
+  playAgain()
 })
 
 gameGrid.forEach((grid) => {

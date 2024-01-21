@@ -8,12 +8,14 @@ main {
   grid-template-rows: repeat(2, 1fr); /* 2 rows with equal height */
   align-items: center;
   justify-content: center;
-  grid-gap: 15px;
+  grid-gap: 5%;
 }
 
 div {
   background-color: white;
-  height: 300px;
+  justify-content: space-between;
+  height: 10vh;
+  width: 10vw;
 }
 
 .image1 {
@@ -91,6 +93,34 @@ button {
 
 .animal4 {
   background-image: url('https://hips.hearstapps.com/hmg-prod/images/chipmunk-nature-photos-1537973822.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.animal5 {
+  background-image: url('https://i.pinimg.com/originals/2a/9e/f0/2a9ef06d820e00998adbe0d6566ccc19.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.animal6 {
+  background-image: url('https://i.pinimg.com/736x/53/b5/7c/53b57cd3381d60640b70cbb7f452112e.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.animal7 {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIqCyuzsVx2w7g7meU0iKt2DbuBWZKD6l6zA&usqp=CAU');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.animal8 {
+  background-image: url('https://media.istockphoto.com/id/162136091/photo/kangaroo-posing-very-much-like-a-human.jpg?s=612x612&w=0&k=20&c=FnL_NkiYXws3H28U8I1H5JAEtAaeYOcIFe3TJYer8xc=');
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
