@@ -35,7 +35,7 @@ body {
 #themeSelection {
   display: flex;
   justify-content: space-around;
-  margin: 5vh;
+  margin: 1vh;
   grid-gap: 10%;
 }
 
@@ -50,13 +50,14 @@ body {
   line-height: 10vh;
   width: 15vw;
   font-family: 'comfortaa', cursive;
+  cursor: pointer;
 }
 
 #sizeSelection {
   display: flex;
   justify-content: space-around;
   grid-gap: 10%;
-  margin: 5vh;
+  margin: 1vh;
 }
 
 .size {
@@ -70,16 +71,47 @@ body {
   line-height: 10vh;
   width: 15vw;
   font-family: 'comfortaa', cursive;
+  cursor: pointer;
+}
+
+.themes:hover,
+.size:hover {
+  background-color: rgba(211, 155, 95, 0.8);
+}
+
+.themes:active,
+.size:active {
+  border-color: rgba(130, 95, 211, 0.8);
+  background-color: white;
 }
 
 button {
-  background-color: #d48633;
-  color: rgb(240, 2, 22);
-  font-size: 1vw;
+  background-color: #29d470;
+  color: #c97090;
+  font-size: 1.5vw;
   border-radius: 15cm;
-  height: 5vh;
-  line-height: 5vh;
+  height: 7.5vh;
+  line-height: 7.5vh;
   width: 10vw;
   position: absolute;
   bottom: 5%;
+  text-decoration: none;
+}
+
+button a:link,
+button a:visited {
+  color: #3b1c32;
+  text-decoration: none;
+  font-family: 'climate crisis', cursive;
+}
+
+button:hover {
+  background-color: #16a752;
+}
+
+h2 {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #3b1c32;
+  font-family: 'Grape Nuts', cursive;
 }

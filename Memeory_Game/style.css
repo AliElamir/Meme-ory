@@ -44,28 +44,28 @@ button {
 
 .cartoon1 {
   background-image: url('https://i.pinimg.com/564x/d6/45/91/d6459174d0fc753a310659f009eeb526.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .cartoon2 {
   background-image: url('https://i.pinimg.com/564x/14/22/64/142264cb21ae4560d223c8af2602d755.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .cartoon3 {
   background-image: url('https://i.pinimg.com/564x/99/67/e2/9967e29de91eec0c588d90bee0f6b4ef.jpg');
-  background-size: 80%;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .cartoon4 {
   background-image: url('https://i.pinimg.com/564x/23/32/04/233204ab8e2271267b3e571a56a41d46.jpg');
-  background-size: 80%;
+  background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
