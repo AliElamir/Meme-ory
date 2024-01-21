@@ -1,33 +1,85 @@
 body {
+  margin: 0 auto;
+  padding: 0;
   text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
   height: 100vh;
+  background-color: #ffcf9c;
+  background-image: url('https://i.pinimg.com/originals/f2/ec/34/f2ec34e2c8457542c1ea56fe00e1c49e.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-h1 {
-  text-align: center;
-  color: red;
+.cyanbg {
+  font-size: 4vw;
+  font-weight: bold;
+  color: #ca054d;
+  font-family: 'Grape Nuts', cursive;
+  position: absolute;
+  top: 0;
+  width: 55%;
+  height: 15vh;
+  background-color: rgb(176, 212, 187);
+  border-bottom: solid black;
+  border-right: solid black;
+  border-left: solid black;
+  border-bottom-left-radius: 10cm;
+  border-bottom-right-radius: 10cm;
 }
 
 #themeSelection {
   display: flex;
   justify-content: space-around;
-  margin: 10%;
+  margin: 5vh;
+  grid-gap: 10%;
 }
 
 .themes {
-  background-color: pink;
-  height: 100px;
-  width: 15%;
+  background-color: #ffcf9c;
+  color: #3b1c32;
+  border: solid #000000;
+  font-size: 1.2vw;
+  font-weight: bold;
+  border-radius: 2cm;
+  height: 10vh;
+  line-height: 10vh;
+  width: 15vw;
+  font-family: 'comfortaa', cursive;
 }
 
 #sizeSelection {
   display: flex;
   justify-content: space-around;
-  margin: 10%;
+  grid-gap: 10%;
+  margin: 5vh;
 }
 
 .size {
-  background-color: dodgerblue;
-  height: 100px;
-  width: 15%;
+  background-color: #ffcf9c;
+  color: #3b1c32;
+  border: solid black;
+  font-size: 1.2vw;
+  font-weight: bold;
+  border-radius: 2cm;
+  height: 10vh;
+  line-height: 10vh;
+  width: 15vw;
+  font-family: 'comfortaa', cursive;
+}
+
+button {
+  background-color: #d48633;
+  color: rgb(240, 2, 22);
+  font-size: 1vw;
+  border-radius: 15cm;
+  height: 5vh;
+  line-height: 5vh;
+  width: 10vw;
+  position: absolute;
+  bottom: 5%;
 }

@@ -46,6 +46,18 @@ let collectionAnimals = [
   'animal3',
   'animal4'
 ]
+
+let collectionWonders = [
+  'wonders1',
+  'wonders2',
+  'wonders3',
+  'wonders4',
+  'wonders1',
+  'wonders2',
+  'wonders3',
+  'wonders4'
+]
+
 let collectionCartoons4x3 = ['cartoon5', 'cartoon5', 'cartoon6', 'cartoon6']
 
 let collectionCartoons4x4 = ['cartoon7', 'cartoon7', 'cartoon8', 'cartoon8']
@@ -53,6 +65,10 @@ let collectionCartoons4x4 = ['cartoon7', 'cartoon7', 'cartoon8', 'cartoon8']
 let collectionAnimals4x3 = ['animal5', 'animal5', 'animal6', 'animal6']
 
 let collectionAnimals4x4 = ['animal7', 'animal7', 'animal8', 'animal8']
+
+let collectionWonders4x3 = ['wonders5', 'wonders5', 'wonders6', 'wonders6']
+
+let collectionWonders4x4 = ['wonders7', 'wonders7', 'wonders8', 'wonders8']
 
 let collectionColors = [
   'image1',
@@ -140,16 +156,16 @@ const addImgs = () => {
     }
   } else if (themeChoice === 3) {
     if (gridSize == 0) {
-      array.push(...collectionAnimals)
+      array.push(...collectionWonders)
       shuffleArray(array)
     } else if (gridSize == 2) {
-      array.push(...collectionAnimals)
-      array.push(...collectionAnimals4x3)
+      array.push(...collectionWonders)
+      array.push(...collectionWonders4x3)
       shuffleArray(array)
     } else if (gridSize == 4) {
-      array.push(...collectionAnimals)
-      array.push(...collectionAnimals4x3)
-      array.push(...collectionAnimals4x4)
+      array.push(...collectionWonders)
+      array.push(...collectionWonders4x3)
+      array.push(...collectionWonders4x4)
       shuffleArray(array)
     }
   } else {

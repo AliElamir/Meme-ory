@@ -14,8 +14,8 @@ main {
 div {
   background-color: white;
   justify-content: space-between;
-  height: 10vh;
-  width: 10vw;
+  height: 20vh;
+  width: 20vw;
 }
 
 .image1 {
@@ -148,6 +148,62 @@ button {
 
 .animal8 {
   background-image: url('https://media.istockphoto.com/id/162136091/photo/kangaroo-posing-very-much-like-a-human.jpg?s=612x612&w=0&k=20&c=FnL_NkiYXws3H28U8I1H5JAEtAaeYOcIFe3TJYer8xc=');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wonders1 {
+  background-image: url('https://i0.wp.com/arabscountries.com/wp-content/uploads/2021/01/Hanging-Gardens-of-Babylon-1.jpg?resize=660%2C490&ssl=1');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wonders2 {
+  background-image: url('https://www.thoughtco.com/thmb/y2yphoYGkvjdV1JcVfGFJucHK1E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/inigoarza-5c72cffe46e0fb0001b68224.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wonders3 {
+  background-image: url('https://cdn.mos.cms.futurecdn.net/BiNbcY5fXy9Lra47jqHKGK-1200-80.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wonders4 {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/bd/Taj_Mahal%2C_Agra%2C_India_edit3.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wonders5 {
+  background-image: url('https://www.shoreexcursionsgroup.com/img/tour/CAPRCHICHENITZA2-2.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wonders6 {
+  background-image: url('https://ehsanbayat.com/wp-content/uploads/2023/08/bahrain-world-trade-center-scaled.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wonders7 {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wonders8 {
+  background-image: url('https://i0.wp.com/www.touristjordan.com/wp-content/uploads/2023/02/shutterstock_1490981186-scaled.jpg?fit=4000%2C2751&ssl=1');
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
