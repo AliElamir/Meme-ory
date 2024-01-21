@@ -86,7 +86,7 @@ body {
 }
 
 button {
-  background-color: #29d470;
+  background-color: #32d174;
   color: #c97090;
   font-size: 1.5vw;
   border-radius: 15cm;
@@ -106,7 +106,7 @@ button a:visited {
 }
 
 button:hover {
-  background-color: #16a752;
+  background-color: #1ea858;
 }
 
 h2 {
