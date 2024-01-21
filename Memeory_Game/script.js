@@ -25,15 +25,15 @@ let userTime = 0
 //------------------------------------------------------- Themes (Collection of images)---------------------------------------------------------------//
 let collection = []
 
-let collectionShrek = [
-  'shrek1',
-  'shrek2',
-  'shrek3',
-  'shrek4',
-  'shrek1',
-  'shrek2',
-  'shrek3',
-  'shrek4'
+let collectionCartoons = [
+  'cartoon1',
+  'cartoon2',
+  'cartoon3',
+  'cartoon4',
+  'cartoon1',
+  'cartoon2',
+  'cartoon3',
+  'cartoon4'
 ]
 
 let collectionAnimals = [
@@ -46,6 +46,9 @@ let collectionAnimals = [
   'animal3',
   'animal4'
 ]
+let collectionCartoons4x3 = ['cartoon5', 'cartoon5', 'cartoon6', 'cartoon6']
+
+let collectionCartoons4x4 = ['cartoon7', 'cartoon7', 'cartoon8', 'cartoon8']
 
 let collectionAnimals4x3 = ['animal5', 'animal5', 'animal6', 'animal6']
 
@@ -79,7 +82,6 @@ function shuffleArray(array) {
   }
 }
 
-// shuffleArray(collectionShrek)
 //---------------------------------------------------------- Game Logic-------------------------------------------------------//
 
 //user chooses the grid size//
@@ -110,16 +112,16 @@ const addGrids = () => {
 const addImgs = () => {
   if (themeChoice === 1) {
     if (gridSize == 0) {
-      array.push(...collectionAnimals)
+      array.push(...collectionCartoons)
       shuffleArray(array)
     } else if (gridSize == 2) {
-      array.push(...collectionAnimals)
-      array.push(...collectionAnimals4x3)
+      array.push(...collectionCartoons)
+      array.push(...collectionCartoons4x3)
       shuffleArray(array)
     } else if (gridSize == 4) {
-      array.push(...collectionAnimals)
-      array.push(...collectionAnimals4x3)
-      array.push(...collectionAnimals4x4)
+      array.push(...collectionCartoons)
+      array.push(...collectionCartoons4x3)
+      array.push(...collectionCartoons4x4)
       shuffleArray(array)
     }
   } else if (themeChoice === 2) {

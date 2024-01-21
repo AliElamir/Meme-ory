@@ -42,29 +42,56 @@ button {
   margin: 50px;
 }
 
-.shrek1 {
-  background-image: url('https://image.tmdb.org/t/p/original/wdl6lNh4paMzu3LrfKRN7JnAVQ4.jpg');
+.cartoon1 {
+  background-image: url('https://i.pinimg.com/564x/d6/45/91/d6459174d0fc753a310659f009eeb526.jpg');
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.shrek2 {
-  background-image: url('https://image.tmdb.org/t/p/original/2yYP0PQjG8zVqturh1BAqu2Tixl.jpg');
+.cartoon2 {
+  background-image: url('https://i.pinimg.com/564x/14/22/64/142264cb21ae4560d223c8af2602d755.jpg');
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.shrek3 {
-  background-image: url('https://m.media-amazon.com/images/I/518PhXkeWxL._AC_UF894,1000_QL80_.jpg');
+.cartoon3 {
+  background-image: url('https://i.pinimg.com/564x/99/67/e2/9967e29de91eec0c588d90bee0f6b4ef.jpg');
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.shrek4 {
-  background-image: url('https://xl.movieposterdb.com/11_08/2003/360985/xl_360985_9cdb7c1a.jpg');
+.cartoon4 {
+  background-image: url('https://i.pinimg.com/564x/23/32/04/233204ab8e2271267b3e571a56a41d46.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.cartoon5 {
+  background-image: url('https://i.pinimg.com/564x/33/e6/f5/33e6f5d51852373d1c9ec042afbc51f9.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cartoon6 {
+  background-image: url('https://i.pinimg.com/564x/97/1e/b6/971eb6de77fa7169ef8c85ca584f59c8.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cartoon7 {
+  background-image: url('https://i.pinimg.com/564x/4a/eb/29/4aeb29d62c53f2b16c797ef7472e1461.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cartoon8 {
+  background-image: url('https://i.pinimg.com/564x/7b/b7/73/7bb77319c6d76285c13e768d16267a8d.jpg');
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
