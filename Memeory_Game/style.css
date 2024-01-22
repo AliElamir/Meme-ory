@@ -4,8 +4,8 @@ body {
   height: 100vh;
   text-align: center;
   display: grid;
-  grid-template-columns: 3fr 5fr 3fr;
-  grid-template-rows: 3fr 5fr 3fr;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 30fr 1fr;
   grid-template-areas:
     'header header header'
     'side game aside'
@@ -18,26 +18,37 @@ body {
 
 header {
   grid-area: header;
+  height: 60px;
   text-align: center;
   background-color: blue;
 }
 
 aside {
+  margin: 0;
   grid-area: aside;
   background-color: red;
 }
 
 section {
+  margin: 0;
   background-color: yellow;
   grid-area: side;
 }
 
 footer {
-  background-color: pink;
+  background-color: orange;
+  height: 20px;
+  text-align: center;
   grid-area: footer;
 }
 
+/* h1 {
+  text-align: center;
+} */
+
 main {
+  justify-self: center;
+  margin: 5px;
   background-color: darkturquoise;
   grid-area: game;
   display: grid;
@@ -45,16 +56,17 @@ main {
   grid-template-rows: 1fr 1fr 1fr 1fr;
   align-items: center;
   justify-content: center;
-  grid-gap: 10px;
-  justify-content: space-around;
+  width: 99%;
+  grid-gap: 5px;
+  /* height: 480px; */
+  justify-content: space-evenly;
 }
 
 div {
+  justify-self: center;
   background-color: white;
-  justify-content: space-between;
-  height: 15vh;
-  width: 15vw;
-  margin: 10px;
+  height: 50px;
+  width: 100px;
 }
 
 .image1 {
@@ -82,6 +94,8 @@ button {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .cartoon2 {
@@ -89,6 +103,8 @@ button {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .cartoon3 {
@@ -96,156 +112,207 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .cartoon4 {
   background-image: url('https://i.pinimg.com/564x/23/32/04/233204ab8e2271267b3e571a56a41d46.jpg');
-  background-size: auto 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 .cartoon5 {
   background-image: url('https://i.pinimg.com/564x/33/e6/f5/33e6f5d51852373d1c9ec042afbc51f9.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .cartoon6 {
   background-image: url('https://i.pinimg.com/564x/97/1e/b6/971eb6de77fa7169ef8c85ca584f59c8.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .cartoon7 {
   background-image: url('https://i.pinimg.com/564x/4a/eb/29/4aeb29d62c53f2b16c797ef7472e1461.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .cartoon8 {
   background-image: url('https://i.pinimg.com/564x/7b/b7/73/7bb77319c6d76285c13e768d16267a8d.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .animal1 {
   background-image: url('https://lafeber.com/pet-birds/wp-content/uploads/2018/06/Cockatiel-2.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .animal2 {
   background-image: url('https://i.pinimg.com/originals/bb/8d/55/bb8d553a3f42b99208ea14d07d6aa05a.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .animal3 {
   background-image: url('https://i.redd.it/xh4xvvx22yt41.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .animal4 {
   background-image: url('https://hips.hearstapps.com/hmg-prod/images/chipmunk-nature-photos-1537973822.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .animal5 {
   background-image: url('https://i.pinimg.com/originals/2a/9e/f0/2a9ef06d820e00998adbe0d6566ccc19.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .animal6 {
   background-image: url('https://i.pinimg.com/736x/53/b5/7c/53b57cd3381d60640b70cbb7f452112e.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .animal7 {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIqCyuzsVx2w7g7meU0iKt2DbuBWZKD6l6zA&usqp=CAU');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .animal8 {
   background-image: url('https://media.istockphoto.com/id/162136091/photo/kangaroo-posing-very-much-like-a-human.jpg?s=612x612&w=0&k=20&c=FnL_NkiYXws3H28U8I1H5JAEtAaeYOcIFe3TJYer8xc=');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .wonders1 {
   background-image: url('https://i0.wp.com/arabscountries.com/wp-content/uploads/2021/01/Hanging-Gardens-of-Babylon-1.jpg?resize=660%2C490&ssl=1');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .wonders2 {
   background-image: url('https://www.thoughtco.com/thmb/y2yphoYGkvjdV1JcVfGFJucHK1E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/inigoarza-5c72cffe46e0fb0001b68224.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .wonders3 {
   background-image: url('https://cdn.mos.cms.futurecdn.net/BiNbcY5fXy9Lra47jqHKGK-1200-80.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .wonders4 {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/bd/Taj_Mahal%2C_Agra%2C_India_edit3.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .wonders5 {
   background-image: url('https://www.shoreexcursionsgroup.com/img/tour/CAPRCHICHENITZA2-2.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .wonders6 {
   background-image: url('https://ehsanbayat.com/wp-content/uploads/2023/08/bahrain-world-trade-center-scaled.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .wonders7 {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .wonders8 {
   background-image: url('https://i0.wp.com/www.touristjordan.com/wp-content/uploads/2023/02/shutterstock_1490981186-scaled.jpg?fit=4000%2C2751&ssl=1');
-  background-size: 80%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .black {
   background-color: black;
-  margin: 20px;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/68/Solid_black.png?20060513000051');
+  /* background-position: center;
+  background-size: 100% 100%; */
+  background-size: cover; /* or background-size: 100% 100%; depending on your preference */
+  height: 100%;
+  width: 100%;
+  border-radius: 0.25cm;
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
 }

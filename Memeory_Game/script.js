@@ -12,6 +12,8 @@ console.log(exportedSize)
 
 const button = document.querySelector('button')
 const main = document.querySelector('main')
+let themeTitle = document.querySelector('h1')
+console.log(themeTitle)
 let gameGrid = document.querySelectorAll('div')
 
 //------------------------------------------------------- User Inputs and selection  ----------------------------------------------------------//
@@ -185,9 +187,22 @@ const addImgs = () => {
   }
 }
 
+const addThemeTitle = () => {
+  if (themeChoice === 1) {
+    themeTitle.innerHTML = 'Find all the matching animals'
+  } else if (themeChoice === 2) {
+    themeTitle.innerHTML = 'Find all the matching cartoons'
+  } else if (themeChoice === 3) {
+    themeTitle.innerHTML = 'Find the matching wonders of the world!'
+  } else {
+    themeTitle.innerHTML = 'Match the pictures!'
+  }
+}
+
 const startGame = () => {
   addGrids()
   addImgs()
+  addThemeTitle()
   gameGrid = document.querySelectorAll('div')
   gameGrid.forEach((el, i) => {
     el.classList.add(array[i])
