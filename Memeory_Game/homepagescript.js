@@ -2,11 +2,9 @@
 
 const userTheme = document.querySelectorAll('.themes')
 
-console.log(userTheme)
-
 const userSize = document.querySelectorAll('.size')
 
-console.log(userSize)
+const userButton = document.querySelector('button')
 
 //------------------------------------------------------- User Inputs and selection  ----------------------------------------------------------//
 
@@ -36,7 +34,7 @@ function userThemeChoice(choices) {
 // arrow function notation was not working. Why?//
 function sizeChoice(choices) {
   if (choices.target.id === 'd1') {
-    size = 0
+    size = 1
   } else if (choices.target.id === 'd2') {
     size = 2
   } else if (choices.target.id === 'd3') {
@@ -47,14 +45,49 @@ function sizeChoice(choices) {
   localStorage.setItem('size', size)
 }
 
+const themeSelected = (selection) => {
+  if (selection.target.classList.contains('clicked')) {
+    selection.target.classList.remove('clicked')
+  } else {
+    userTheme.forEach((them) => {
+      them.classList.remove('clicked')
+    })
+    selection.target.classList.add('clicked')
+  }
+}
+
+const sizeSelected = (selection) => {
+  if (selection.target.classList.contains('clicked')) {
+    selection.target.classList.remove('clicked')
+  } else {
+    userSize.forEach((them) => {
+      them.classList.remove('clicked')
+    })
+    selection.target.classList.add('clicked')
+  }
+}
+
+const buttonToggle = () => {
+  if (theme === 0 || size === 0) {
+    console.log(theme)
+    userButton.style.display = 'none'
+  } else {
+    userButton.style.display = 'block'
+  }
+}
+
 //------------------------------------------------------- event handlers  ----------------------------------------------------------//
 
 userTheme.forEach((themes) => {
   themes.addEventListener('click', userThemeChoice)
+  themes.addEventListener('click', themeSelected)
+  themes.addEventListener('click', buttonToggle)
 })
 
 userSize.forEach((sizes) => {
   sizes.addEventListener('click', sizeChoice)
+  sizes.addEventListener('click', sizeSelected)
+  sizes.addEventListener('click', buttonToggle)
 })
 
 //----------------------------------------------------------------------------------------------------------------------------------/

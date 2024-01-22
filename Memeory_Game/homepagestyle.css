@@ -86,6 +86,7 @@ body {
 }
 
 button {
+  display: none;
   background-color: #32d174;
   color: #c97090;
   font-size: 1.5vw;
@@ -114,4 +115,8 @@ h2 {
   font-weight: bold;
   color: #3b1c32;
   font-family: 'Grape Nuts', cursive;
+}
+
+.clicked {
+  background-color: rgba(211, 155, 95, 0.8);
 }

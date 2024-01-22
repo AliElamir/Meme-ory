@@ -10,7 +10,7 @@ body {
     'header header header'
     'side game aside'
     'footer footer footer';
-  background-image: url('https://static.vecteezy.com/system/resources/previews/011/703/279/large_2x/abstract-pastel-pink-and-white-textured-background-light-minimalist-backdrop-brush-strokes-on-paper-modern-art-photo.jpg');
+  background-image: url('https://i.pinimg.com/564x/e5/46/cd/e546cd3b3caad43551879b89ad9c3844.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -35,7 +35,11 @@ aside {
   margin: 0;
   grid-area: aside;
   line-height: 70vh;
-  background-color: bisque;
+  background-image: url('https://i.pinimg.com/564x/e5/46/cd/e546cd3b3caad43551879b89ad9c3844.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* background-color: bisque; */
   border: solid #00272b;
   border-top-left-radius: 0.5cm;
   border-bottom-left-radius: 0.5cm;
@@ -338,4 +342,24 @@ button {
   border-radius: 0.25cm;
   margin: 0; /* Remove any default margin */
   padding: 0; /* Remove any default padding */
+}
+
+.samp {
+  display: none;
+  position: absolute;
+  background-image: url('https://i.imgur.com/UA7i752.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  line-height: 180vh;
+  color: white;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 50px;
+}
+
+a {
+  color: white;
 }

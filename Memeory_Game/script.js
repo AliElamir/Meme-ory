@@ -2,19 +2,15 @@
 
 const exportedTheme = localStorage.getItem('theme')
 
-console.log(exportedTheme)
-
 const exportedSize = localStorage.getItem('size')
-
-console.log(exportedSize)
 
 //------------------------------------------------------- Global Variables ---------------------------------------------------------------//
 
 const button = document.querySelector('button')
 const main = document.querySelector('main')
 let themeTitle = document.querySelector('h1')
-console.log(themeTitle)
 let gameGrid = document.querySelectorAll('div')
+const win = document.querySelector('.samp')
 
 //------------------------------------------------------- User Inputs and selection  ----------------------------------------------------------//
 
@@ -93,7 +89,6 @@ let divArr = []
 
 // referred from internet
 function shuffleArray(array) {
-  debugger
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
     // Swap array[i] and array[j]
@@ -106,16 +101,15 @@ function shuffleArray(array) {
 //user chooses the grid size//
 
 const addGrids = () => {
-  if (gridSize == 0) {
-    console.log('grid size is 1')
-  } else if (gridSize == 2) {
+  if (gridSize === 1) {
+  } else if (gridSize === 2) {
     //4x3 grid
     for (let i = 0; i < 4; i++) {
       const gridElements = document.createElement('div')
       main.appendChild(gridElements)
       gridElements.classList.add('black')
     }
-  } else if (gridSize == 4) {
+  } else if (gridSize === 4) {
     //4x3 grid
     for (let i = 0; i < 8; i++) {
       const gridElements = document.createElement('div')
@@ -123,64 +117,62 @@ const addGrids = () => {
       gridElements.classList.add('black')
     }
   } else {
-    console.log('grid size is 1')
   }
 }
 
 // adds the shuffled array as classes into each div //
 const addImgs = () => {
   if (themeChoice === 1) {
-    if (gridSize == 0) {
+    if (gridSize === 1) {
       array.push(...collectionCartoons)
-      debugger
       shuffleArray(array)
-    } else if (gridSize == 2) {
+    } else if (gridSize === 2) {
       array.push(...collectionCartoons)
       array.push(...collectionCartoons4x3)
       shuffleArray(array)
-    } else if (gridSize == 4) {
+    } else if (gridSize === 4) {
       array.push(...collectionCartoons)
       array.push(...collectionCartoons4x3)
       array.push(...collectionCartoons4x4)
       shuffleArray(array)
     }
   } else if (themeChoice === 2) {
-    if (gridSize == 0) {
+    if (gridSize === 1) {
       array.push(...collectionAnimals)
       shuffleArray(array)
-    } else if (gridSize == 2) {
+    } else if (gridSize === 2) {
       array.push(...collectionAnimals)
       array.push(...collectionAnimals4x3)
       shuffleArray(array)
-    } else if (gridSize == 4) {
+    } else if (gridSize === 4) {
       array.push(...collectionAnimals)
       array.push(...collectionAnimals4x3)
       array.push(...collectionAnimals4x4)
       shuffleArray(array)
     }
   } else if (themeChoice === 3) {
-    if (gridSize == 0) {
+    if (gridSize === 1) {
       array.push(...collectionWonders)
       shuffleArray(array)
-    } else if (gridSize == 2) {
+    } else if (gridSize === 2) {
       array.push(...collectionWonders)
       array.push(...collectionWonders4x3)
       shuffleArray(array)
-    } else if (gridSize == 4) {
+    } else if (gridSize === 4) {
       array.push(...collectionWonders)
       array.push(...collectionWonders4x3)
       array.push(...collectionWonders4x4)
       shuffleArray(array)
     }
   } else {
-    if (gridSize == 0) {
+    if (gridSize === 1) {
       array.push(...collectionAnimals)
       shuffleArray(array)
-    } else if (gridSize == 2) {
+    } else if (gridSize === 2) {
       array.push(...collectionAnimals)
       array.push(...collectionAnimals4x3)
       shuffleArray(array)
-    } else if (gridSize == 4) {
+    } else if (gridSize === 4) {
       array.push(...collectionAnimals)
       array.push(...collectionAnimals4x3)
       array.push(...collectionAnimals4x4)
@@ -191,9 +183,9 @@ const addImgs = () => {
 
 const addThemeTitle = () => {
   if (themeChoice === 1) {
-    themeTitle.innerHTML = 'Find all the matching animals'
-  } else if (themeChoice === 2) {
     themeTitle.innerHTML = 'Find all the matching cartoons'
+  } else if (themeChoice === 2) {
+    themeTitle.innerHTML = 'Find all the matching animals'
   } else if (themeChoice === 3) {
     themeTitle.innerHTML = 'Find the matching wonders of the world!'
   } else {
@@ -233,10 +225,11 @@ const removeClass = (selection) => {
         //VV in order to clear only the latest selection VV extra game mode VV
         divArr = []
       }
+      winScreen()
     } else {
+      winScreen()
     }
   } else {
-    console.log('already selected')
   }
 }
 
@@ -249,10 +242,27 @@ const playAgain = () => {
 
 // adds the cover class onto the wrong choices to cover them again//
 const revertBlack = (params) => {
-  console.log(params)
   params.forEach((param) => {
     param.classList.add('black')
   })
+}
+
+// const winScreen = () => {
+//   gameGrid.forEach((elements) => {
+//     if (elements.classList.contains('black')) {
+//       console.log('game not over')
+//     } else {
+//       samp.style.display = 'block'
+//     }
+//   })
+// }
+
+const winScreen = () => {
+  const blackEl = document.querySelectorAll('.black')
+  console.log(blackEl)
+  if (blackEl.length === 0) {
+    win.style.display = 'block'
+  }
 }
 
 //-------------------------------------------------- Event listeners -------------------------------------------------------//
