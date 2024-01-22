@@ -93,6 +93,7 @@ let divArr = []
 
 // referred from internet
 function shuffleArray(array) {
+  debugger
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
     // Swap array[i] and array[j]
@@ -131,6 +132,7 @@ const addImgs = () => {
   if (themeChoice === 1) {
     if (gridSize == 0) {
       array.push(...collectionCartoons)
+      debugger
       shuffleArray(array)
     } else if (gridSize == 2) {
       array.push(...collectionCartoons)

@@ -10,46 +10,71 @@ body {
     'header header header'
     'side game aside'
     'footer footer footer';
-  background-image: url('https://i.pinimg.com/564x/fc/41/a4/fc41a436120969e14803959bdd3d6567.jpg');
+  background-image: url('https://static.vecteezy.com/system/resources/previews/011/703/279/large_2x/abstract-pastel-pink-and-white-textured-background-light-minimalist-backdrop-brush-strokes-on-paper-modern-art-photo.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  /* background-color: rgba(243, 218, 188, 0.459); */
 }
 
 header {
   grid-area: header;
+  background-image: url('https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?cs=srgb&dl=pexels-francesco-ungaro-281260.jpg&fm=jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 60px;
+  color: #00272b;
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
-  background-color: blue;
+  /* background-color: #86bbd8; */
+  border-bottom: solid #00272b;
 }
 
 aside {
   margin: 0;
   grid-area: aside;
-  background-color: red;
+  line-height: 70vh;
+  background-color: bisque;
+  border: solid #00272b;
+  border-top-left-radius: 0.5cm;
+  border-bottom-left-radius: 0.5cm;
 }
 
 section {
   margin: 0;
-  background-color: yellow;
   grid-area: side;
+  line-height: 70vh;
+  background-image: url('https://i.pinimg.com/564x/e5/46/cd/e546cd3b3caad43551879b89ad9c3844.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* background-color: bisque; */
+  border: solid #00272b;
+  border-top-right-radius: 0.5cm;
+  border-bottom-right-radius: 0.5cm;
 }
 
 footer {
-  background-color: orange;
+  /* background-color: #86bbd8; */
   height: 20px;
   text-align: center;
+  background-image: url('https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?cs=srgb&dl=pexels-francesco-ungaro-281260.jpg&fm=jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   grid-area: footer;
+  border-top: solid #00272b;
 }
 
-/* h1 {
-  text-align: center;
-} */
+h1 {
+  line-height: 2vh;
+}
 
 main {
   justify-self: center;
   margin: 5px;
-  background-color: darkturquoise;
+  /* background-color: bisque; */
   grid-area: game;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -305,10 +330,8 @@ button {
 }
 
 .black {
-  background-color: black;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/68/Solid_black.png?20060513000051');
-  /* background-position: center;
-  background-size: 100% 100%; */
+  background-color: #00272b;
+  background-image: url('https://prnt.sc/asZar9xBjC2k');
   background-size: cover; /* or background-size: 100% 100%; depending on your preference */
   height: 100%;
   width: 100%;
