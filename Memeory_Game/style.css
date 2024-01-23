@@ -34,7 +34,9 @@ header {
 aside {
   margin: 0;
   grid-area: aside;
-  line-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: url('https://i.pinimg.com/564x/e5/46/cd/e546cd3b3caad43551879b89ad9c3844.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -46,9 +48,10 @@ aside {
 }
 
 section {
+  display: flex;
+  align-items: center;
   margin: 0;
   grid-area: side;
-  line-height: 70vh;
   background-image: url('https://i.pinimg.com/564x/e5/46/cd/e546cd3b3caad43551879b89ad9c3844.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -344,7 +347,23 @@ button {
   padding: 0; /* Remove any default padding */
 }
 
-.samp {
+.winStyle {
+  display: none;
+  position: absolute;
+  background-image: url('https://i.imgur.com/UA7i752.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  line-height: 180vh;
+  color: white;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 50px;
+}
+
+.loseStyle {
   display: none;
   position: absolute;
   background-image: url('https://i.imgur.com/UA7i752.png');
@@ -361,5 +380,21 @@ button {
 }
 
 a {
-  color: white;
+  color: #00272b;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}
+
+.life {
+  font-size: 30px;
+  color: #00272b;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}
+
+.notifs {
+  font-size: 30px;
+  color: #00272b;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
 }

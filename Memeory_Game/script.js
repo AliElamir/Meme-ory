@@ -10,7 +10,9 @@ const button = document.querySelector('button')
 const main = document.querySelector('main')
 let themeTitle = document.querySelector('h1')
 let gameGrid = document.querySelectorAll('div')
-const win = document.querySelector('.samp')
+const win = document.querySelector('.winStyle')
+const lose = document.querySelector('.loseStyle')
+let livesText = document.querySelector('.life')
 
 //------------------------------------------------------- User Inputs and selection  ----------------------------------------------------------//
 
@@ -19,6 +21,8 @@ let themeChoice = parseInt(exportedTheme)
 let gridSize = parseInt(exportedSize)
 
 let userTime = 0
+
+let userLives = 0
 
 //------------------------------------------------------- Themes (Collection of images)---------------------------------------------------------------//
 let collection = []
@@ -102,7 +106,11 @@ function shuffleArray(array) {
 
 const addGrids = () => {
   if (gridSize === 1) {
+    userLives = 5
+    livesText.innerHTML = `lives remaining: ${userLives}`
   } else if (gridSize === 2) {
+    userLives = 8
+    livesText.innerHTML = `lives remaining: ${userLives}`
     //4x3 grid
     for (let i = 0; i < 4; i++) {
       const gridElements = document.createElement('div')
@@ -110,6 +118,8 @@ const addGrids = () => {
       gridElements.classList.add('black')
     }
   } else if (gridSize === 4) {
+    userLives = 10
+    livesText.innerHTML = `lives remaining: ${userLives}`
     //4x3 grid
     for (let i = 0; i < 8; i++) {
       const gridElements = document.createElement('div')
@@ -219,15 +229,20 @@ const removeClass = (selection) => {
           revertBlack(divArr)
           playAgain()
         }, 1000)
+        userLives--
+        livesText.innerHTML = `lives remaining: ${userLives}`
+        console.log(userLives)
         arr = []
       } else {
         arr = []
-        //VV in order to clear only the latest selection VV extra game mode VV
+        //VV in order to clear only the latest selection
         divArr = []
       }
       winScreen()
+      loseScreen()
     } else {
       winScreen()
+      loseScreen()
     }
   } else {
   }
@@ -257,17 +272,21 @@ const revertBlack = (params) => {
 //   })
 // }
 
+const loseScreen = () => {
+  if (userLives === 0) {
+    win.style.display = 'block'
+  }
+}
+
 const winScreen = () => {
   const blackEl = document.querySelectorAll('.black')
-  console.log(blackEl)
   if (blackEl.length === 0) {
-    win.style.display = 'block'
+    lose.style.display = 'block'
   }
 }
 
 //-------------------------------------------------- Event listeners -------------------------------------------------------//
 
-// referred from internet
 document.addEventListener('DOMContentLoaded', () => {
   startGame()
   playAgain()
