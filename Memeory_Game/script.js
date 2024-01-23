@@ -7,12 +7,19 @@ const exportedSize = localStorage.getItem('size')
 //------------------------------------------------------- Global Variables ---------------------------------------------------------------//
 
 const button = document.querySelector('button')
+
 const main = document.querySelector('main')
+
 let themeTitle = document.querySelector('h1')
+
 let gameGrid = document.querySelectorAll('div')
+
 const win = document.querySelector('.winStyle')
+
 const lose = document.querySelector('.loseStyle')
+
 let livesText = document.querySelector('.life')
+
 let notification = document.querySelector('.notifs')
 
 //------------------------------------------------------- User Inputs and selection  ----------------------------------------------------------//
