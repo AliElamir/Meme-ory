@@ -1,4 +1,4 @@
-//------------------------------------------------------- Importing variables from homepage (user selection)---------------------------------------------------------------//
+//------------------------------------- Importing variables from homepage (user selection)------------------------------------------------//
 
 const exportedTheme = localStorage.getItem('theme')
 
@@ -25,7 +25,7 @@ let userTime = 0
 
 let userLives = 0
 
-//------------------------------------------------------- Themes (Collection of images)---------------------------------------------------------------//
+//------------------------------------------------------- Themes (Collection of images as classes)---------------------------------------------------------------//
 let collection = []
 
 let collectionCartoons = [
@@ -90,6 +90,7 @@ let array = []
 let arr = []
 
 let divArr = []
+
 //-------------------------------------------------- Global array and randomizer -------------------------------------------------------//
 
 // referred from internet
@@ -101,9 +102,9 @@ function shuffleArray(array) {
   }
 }
 
-//---------------------------------------------------------- Game Logic-------------------------------------------------------//
+//------------------------------------------------------------ Game Logic----------------------------------------------------------//
 
-//user chooses the grid size//
+//Increases the size of the grid for the user after they increase their grid size//
 
 const addGrids = () => {
   if (gridSize === 1) {
@@ -121,7 +122,7 @@ const addGrids = () => {
   } else if (gridSize === 4) {
     userLives = 10
     livesText.innerHTML = `lives remaining: ${userLives}`
-    //4x3 grid
+    //4x4 grid
     for (let i = 0; i < 8; i++) {
       const gridElements = document.createElement('div')
       main.appendChild(gridElements)
@@ -132,6 +133,7 @@ const addGrids = () => {
 }
 
 // adds the shuffled array as classes into each div //
+
 const addImgs = () => {
   if (themeChoice === 1) {
     if (gridSize === 1) {
@@ -192,6 +194,8 @@ const addImgs = () => {
   }
 }
 
+// Changes the theme title at the top of the page based on their theme choice //
+
 const addThemeTitle = () => {
   if (themeChoice === 1) {
     themeTitle.innerHTML = 'Find all the matching cartoons'
@@ -203,6 +207,8 @@ const addThemeTitle = () => {
     themeTitle.innerHTML = 'Match the pictures!'
   }
 }
+
+// starts the game (called on page load)//
 
 const startGame = () => {
   addGrids()
@@ -217,20 +223,21 @@ const startGame = () => {
 // removing the cover class in order to reveal contents under it //
 const removeClass = (selection) => {
   if (selection.target.classList.contains('black')) {
-    selection.target.classList.remove('black')
-    divArr.push(selection.target)
-    arr.push(selection.target.classList)
+    selection.target.classList.remove('black') // To remove the cover class
+    divArr.push(selection.target) // pushes what the user selected into divArr
+    arr.push(selection.target.classList) // pushes the classlist of what the user selected into arr
     if (arr.length === 2) {
       if (arr[0].value !== arr[1].value) {
+        //compares the classlist of the first and second click
         gameGrid.forEach((el) => {
           //remove event listener from all the divs so user cant click on other divs while it shows their selection
           el.removeEventListener('click', removeClass)
         })
         setTimeout(() => {
-          revertBlack(divArr)
-          playAgain()
-        }, 1000)
-        userLives--
+          revertBlack(divArr) //add the black class back on top of their wrong selection to hide it back into divArr
+          playAgain() //adds all the event listeners back again
+        }, 1000) // These functions take place after 1 second
+        userLives-- //reduces their number of lives after their mistake
         livesText.innerHTML = `lives remaining: ${userLives}`
         notification.classList.add('wnotifs')
         setTimeout(() => {
@@ -243,7 +250,6 @@ const removeClass = (selection) => {
           notification.classList.remove('cnotifs')
         }, 1000)
         arr = []
-        //VV in order to clear only the latest selection
         divArr = []
       }
       winScreen()
@@ -270,11 +276,15 @@ const revertBlack = (params) => {
   })
 }
 
+//Display losing screen when user runs out of lives
+
 const loseScreen = () => {
   if (userLives === 0) {
     win.style.display = 'block'
   }
 }
+
+//Displays winning screen when user matches all the images together
 
 const winScreen = () => {
   const blackEl = document.querySelectorAll('.black')
@@ -287,7 +297,7 @@ const winScreen = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   startGame()
-  playAgain()
+  playAgain() //adds event listeners to the appended divs
 })
 
 gameGrid.forEach((grid) => {

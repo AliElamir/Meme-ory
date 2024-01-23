@@ -31,7 +31,7 @@ const userThemeChoice = (choices) => {
 }
 
 //user chooses the grid size//
-// arrow function notation was not working. Why?//
+
 const sizeChoice = (choices) => {
   if (choices.target.id === 'd1') {
     size = 1
@@ -45,6 +45,8 @@ const sizeChoice = (choices) => {
   localStorage.setItem('size', size)
 }
 
+// adds the class clicked which just high lights the choices the user selects
+
 const themeSelected = (selection) => {
   if (selection.target.classList.contains('clicked')) {
     selection.target.classList.remove('clicked')
@@ -56,6 +58,8 @@ const themeSelected = (selection) => {
   }
 }
 
+// adds the class clicked which just high lights the choices the user selects
+
 const sizeSelected = (selection) => {
   if (selection.target.classList.contains('clicked')) {
     selection.target.classList.remove('clicked')
@@ -66,6 +70,8 @@ const sizeSelected = (selection) => {
     selection.target.classList.add('clicked')
   }
 }
+
+// both theme and size need to be selected so that the play button appears
 
 const buttonToggle = () => {
   if (theme === 0 || size === 0) {
