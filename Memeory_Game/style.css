@@ -393,8 +393,25 @@ a {
 }
 
 .notifs {
-  font-size: 30px;
   color: #00272b;
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
+}
+
+.wnotifs {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/011/148/558/non_2x/right-and-wrong-vector-design-illustration-isolated-on-transparent-background-free-png.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100%;
+}
+
+.cnotifs {
+  background-image: url('https://image.similarpng.com/very-thumbnail/2020/11/Hand-drawn-correct-icon-on-transparent-background-PNG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100%;
 }

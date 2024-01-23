@@ -13,6 +13,7 @@ let gameGrid = document.querySelectorAll('div')
 const win = document.querySelector('.winStyle')
 const lose = document.querySelector('.loseStyle')
 let livesText = document.querySelector('.life')
+let notification = document.querySelector('.notifs')
 
 //------------------------------------------------------- User Inputs and selection  ----------------------------------------------------------//
 
@@ -231,9 +232,16 @@ const removeClass = (selection) => {
         }, 1000)
         userLives--
         livesText.innerHTML = `lives remaining: ${userLives}`
-        console.log(userLives)
+        notification.classList.add('wnotifs')
+        setTimeout(() => {
+          notification.classList.remove('wnotifs')
+        }, 1000)
         arr = []
       } else {
+        notification.classList.add('cnotifs')
+        setTimeout(() => {
+          notification.classList.remove('cnotifs')
+        }, 1000)
         arr = []
         //VV in order to clear only the latest selection
         divArr = []
@@ -261,16 +269,6 @@ const revertBlack = (params) => {
     param.classList.add('black')
   })
 }
-
-// const winScreen = () => {
-//   gameGrid.forEach((elements) => {
-//     if (elements.classList.contains('black')) {
-//       console.log('game not over')
-//     } else {
-//       samp.style.display = 'block'
-//     }
-//   })
-// }
 
 const loseScreen = () => {
   if (userLives === 0) {

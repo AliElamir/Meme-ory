@@ -16,7 +16,6 @@ let size = 0
 //user chooses the theme//
 
 const userThemeChoice = (choices) => {
-  console.log('test')
   if (choices.target.id === 't1') {
     theme = 1
   } else if (choices.target.id === 't2') {
@@ -34,7 +33,6 @@ const userThemeChoice = (choices) => {
 //user chooses the grid size//
 // arrow function notation was not working. Why?//
 const sizeChoice = (choices) => {
-  console.log('hello')
   if (choices.target.id === 'd1') {
     size = 1
   } else if (choices.target.id === 'd2') {
@@ -71,7 +69,6 @@ const sizeSelected = (selection) => {
 
 const buttonToggle = () => {
   if (theme === 0 || size === 0) {
-    console.log(theme)
     userButton.style.display = 'none'
   } else {
     userButton.style.display = 'block'
