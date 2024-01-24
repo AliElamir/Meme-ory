@@ -22,8 +22,10 @@ Choose your theme, number of images (size of your grid) you wish to complete, an
 
 Click on the boxes to reveal their contents, if the images do not match, they will be hidden. Make sure to remember them to match them with their other pairs later! Also, make sure you dont run out of lives.
 
-<img src="/images/homepage.png" alt="clickpic" width="400px"/>
+<img src="/images/homepage.png" alt="clickpic" width="680px"/>
 
 ---
 
-### Credits
+### Contact
+
+Ali Elsayed - ali.elamiir.a@gmail.com

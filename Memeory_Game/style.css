@@ -13,8 +13,8 @@ body {
   background-image: url('https://i.pinimg.com/564x/e5/46/cd/e546cd3b3caad43551879b89ad9c3844.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  /* background-color: rgba(243, 218, 188, 0.459); */
+  background-size: 100%;
+  overflow: hidden;
 }
 
 header {
@@ -27,7 +27,6 @@ header {
   color: #00272b;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
-  /* background-color: #86bbd8; */
   border-bottom: solid #00272b;
 }
 
@@ -41,7 +40,6 @@ aside {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* background-color: bisque; */
   border: solid #00272b;
   border-top-left-radius: 0.5cm;
   border-bottom-left-radius: 0.5cm;
@@ -56,14 +54,12 @@ section {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* background-color: bisque; */
   border: solid #00272b;
   border-top-right-radius: 0.5cm;
   border-bottom-right-radius: 0.5cm;
 }
 
 footer {
-  /* background-color: #86bbd8; */
   height: 20px;
   text-align: center;
   background-image: url('https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?cs=srgb&dl=pexels-francesco-ungaro-281260.jpg&fm=jpg');
@@ -81,7 +77,6 @@ h1 {
 main {
   justify-self: center;
   margin: 5px;
-  /* background-color: bisque; */
   grid-area: game;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -90,7 +85,6 @@ main {
   justify-content: center;
   width: 99%;
   grid-gap: 5px;
-  /* height: 480px; */
   justify-content: space-evenly;
 }
 
@@ -336,6 +330,78 @@ button {
   width: 100%;
 }
 
+.anime1 {
+  background-image: url('https://64.media.tumblr.com/62aef3d82175d80f1d62225b9b32e630/a64a834c44e1bf60-10/s540x810/42e0e24a2d1bc0b350d7e37fca51742b124a6115.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.anime2 {
+  background-image: url('https://media1.tenor.com/m/qCbx8Zp1LnIAAAAd/anime-anime-funny.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.anime3 {
+  background-image: url('https://media1.tenor.com/m/H63Kb7qg8HoAAAAC/anime-chainsaw.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.anime4 {
+  background-image: url('https://i.pinimg.com/originals/10/52/b8/1052b889f94c009f7e5059cb1e38cc8e.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.anime5 {
+  background-image: url('https://i.pinimg.com/originals/14/cc/ef/14ccef1a5384c184766a966eb7d03e68.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.anime6 {
+  background-image: url('https://i.pinimg.com/originals/7c/e6/8c/7ce68c8e9b2018de22d7ceedb0bac416.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.anime7 {
+  background-image: url('https://i.pinimg.com/originals/ed/04/ea/ed04eadedc0bb84ef39728ae6fe367c0.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.anime8 {
+  background-image: url('https://i.pinimg.com/originals/c8/6d/9d/c86d9d58ec5bacf269f375daedbb1b36.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
 .black {
   background-color: #00272b;
   background-image: url('https://prnt.sc/asZar9xBjC2k');
@@ -347,10 +413,10 @@ button {
   padding: 0; /* Remove any default padding */
 }
 
-.winStyle {
+.loseStyle {
   display: none;
   position: absolute;
-  background-image: url('https://i.imgur.com/UA7i752.png');
+  background-image: url('/images/lose background.png');
   background-size: 100%;
   background-repeat: no-repeat;
   top: 0;
@@ -361,9 +427,10 @@ button {
   color: white;
   font-family: 'Pixelify Sans', sans-serif;
   font-size: 50px;
+  max-height: 100%;
 }
 
-.loseStyle {
+.winStyle {
   display: none;
   position: absolute;
   background-image: url('https://i.imgur.com/UA7i752.png');

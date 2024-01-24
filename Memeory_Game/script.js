@@ -22,15 +22,17 @@ let livesText = document.querySelector('.life')
 
 let notification = document.querySelector('.notifs')
 
+const bodyBackGround = document.querySelector('body')
+
+console.log(bodyBackGround)
+
 //------------------------------------------------------- User Inputs and selection  ----------------------------------------------------------//
 
 let themeChoice = parseInt(exportedTheme)
 
 let gridSize = parseInt(exportedSize)
 
-let userTime = 0
-
-let userLives = 0
+let userLives = 20
 
 //------------------------------------------------------- Themes (Collection of images as classes)---------------------------------------------------------------//
 let collection = []
@@ -68,6 +70,17 @@ let collectionWonders = [
   'wonders4'
 ]
 
+let collectionAnimes = [
+  'anime1',
+  'anime2',
+  'anime3',
+  'anime4',
+  'anime1',
+  'anime2',
+  'anime3',
+  'anime4'
+]
+
 let collectionCartoons4x3 = ['cartoon5', 'cartoon5', 'cartoon6', 'cartoon6']
 
 let collectionCartoons4x4 = ['cartoon7', 'cartoon7', 'cartoon8', 'cartoon8']
@@ -79,6 +92,10 @@ let collectionAnimals4x4 = ['animal7', 'animal7', 'animal8', 'animal8']
 let collectionWonders4x3 = ['wonders5', 'wonders5', 'wonders6', 'wonders6']
 
 let collectionWonders4x4 = ['wonders7', 'wonders7', 'wonders8', 'wonders8']
+
+let collectionAnimes4x3 = ['anime5', 'anime5', 'anime6', 'anime6']
+
+let collectionAnimes4x4 = ['anime7', 'anime7', 'anime8', 'anime8']
 
 let collectionColors = [
   'image1',
@@ -186,16 +203,16 @@ const addImgs = () => {
     }
   } else {
     if (gridSize === 1) {
-      array.push(...collectionAnimals)
+      array.push(...collectionAnimes)
       shuffleArray(array)
     } else if (gridSize === 2) {
-      array.push(...collectionAnimals)
-      array.push(...collectionAnimals4x3)
+      array.push(...collectionAnimes)
+      array.push(...collectionAnimes4x3)
       shuffleArray(array)
     } else if (gridSize === 4) {
-      array.push(...collectionAnimals)
-      array.push(...collectionAnimals4x3)
-      array.push(...collectionAnimals4x4)
+      array.push(...collectionAnimes)
+      array.push(...collectionAnimes4x3)
+      array.push(...collectionAnimes4x4)
       shuffleArray(array)
     }
   }
@@ -211,7 +228,7 @@ const addThemeTitle = () => {
   } else if (themeChoice === 3) {
     themeTitle.innerHTML = 'Find the matching wonders of the world!'
   } else {
-    themeTitle.innerHTML = 'Match the pictures!'
+    themeTitle.innerHTML = 'Match the anime gifs!'
   }
 }
 
@@ -287,7 +304,8 @@ const revertBlack = (params) => {
 
 const loseScreen = () => {
   if (userLives === 0) {
-    win.style.display = 'block'
+    lose.style.display = 'block'
+    console.log('you lose')
   }
 }
 
@@ -295,8 +313,10 @@ const loseScreen = () => {
 
 const winScreen = () => {
   const blackEl = document.querySelectorAll('.black')
+  console.log(blackEl)
   if (blackEl.length === 0) {
-    lose.style.display = 'block'
+    win.style.display = 'block'
+    console.log('you win')
   }
 }
 
