@@ -24,7 +24,7 @@ Choose your theme, number of images (size of your grid) you wish to complete, an
 
 Click on the boxes to reveal their contents, if the images do not match, they will be hidden. Make sure to remember them to match them with their other pairs later! Also, make sure you dont run out of lives.
 
-<img src="/images/homepage.png" alt="clickpic" width="680px"/>
+<img src="https://media3.giphy.com/media/3hrLxUpp67IpmpZT1h/giphy.gif" alt="clickpic" width="680px"/>
 
 ---
 
@@ -97,3 +97,5 @@ const removeClass = (selection) => {
 ### Contact
 
 Ali Elsayed - ali.elamiir.a@gmail.com
+
+Linkedin - ali-elamir@linkedin.com
