@@ -143,7 +143,7 @@ button {
 }
 
 .cartoon4 {
-  background-image: url('https://i.pinimg.com/564x/23/32/04/233204ab8e2271267b3e571a56a41d46.jpg');
+  background-image: url('https://i.pinimg.com/564x/b8/30/ed/b830ed75f412156ee530168451833da8.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -241,7 +241,7 @@ button {
 }
 
 .animal7 {
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIqCyuzsVx2w7g7meU0iKt2DbuBWZKD6l6zA&usqp=CAU');
+  background-image: url('https://i.pinimg.com/564x/db/75/dc/db75dc744023fae1bdc2db2aee4f4ba0.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -416,7 +416,7 @@ button {
 .loseStyle {
   display: none;
   position: absolute;
-  background-image: url('/images/lose background.png');
+  background-image: url('https://cdn.discordapp.com/attachments/544452412140814336/1199778309546979441/LOSE.png?ex=65c3c79f&is=65b1529f&hm=6e2cf5c376d2205c502e2314242e7055b1ed83d92c25bc259f776c1c81a0af65&');
   background-size: 100%;
   background-repeat: no-repeat;
   top: 0;
