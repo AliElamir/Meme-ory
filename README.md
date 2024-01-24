@@ -28,25 +28,63 @@ Click on the boxes to reveal their contents, if the images do not match, they wi
 
 ---
 
-## The Code Behind The Program:
+## Learnings and the Code Behind The Program:
+
+DOM manipulation and being able to compare element's classes with each other in order to create a logic to hiding and revealing their contents. Below is the main logic of the code, along with it are comments explaining the steps.
 
 ```
-    function nextQuestion() {
-        if (!gameEnded) {
-            const randomIdx = Math.floor(Math.random()* 10);
-            randomQuestion = questions[randomIdx];
-            const currentQuestion = randomQuestion.question;
-            const choices = randomQuestion.choices;
-            questionEl.innerHTML = currentQuestion;
-            for (let i = 0; i < choices.length; i++) {
-                const choiceEl = choicesEls[i];
-                choiceEl.innerHTML = choices[i];
-            }
-        }
+// The removeClass function handles uncovering contents of the users selection by removing the cover class 'black'//
+const removeClass = (selection) => {
+  if (selection.target.classList.contains('black')) {
+    selection.target.classList.remove('black') // To remove the cover class
+    divArr.push(selection.target) // pushes what the user selected into divArr
+    arr.push(selection.target.classList) // pushes the classlist of what the user selected into arr
+    if (arr.length === 2) {
+      if (arr[0].value !== arr[1].value) {
+        //compares the classlist of the first and second click
+        gameGrid.forEach((el) => {
+          //removes event listener from all the divs so user cant click on other divs while it shows their selection
+          el.removeEventListener('click', removeClass)
+        })
+        setTimeout(() => {
+          revertBlack(divArr) //add the black class back on top of their wrong selection to hide it back into divArr
+          playAgain() //adds all the event listeners back again
+        }, 1000) // These functions take place after 1 second
+        userLives-- //reduces their number of lives after their mistake
+        livesText.innerHTML = `lives remaining: ${userLives}` //displays lives remaining
+        notification.classList.add('wnotifs')
+        setTimeout(() => {
+          notification.classList.remove('wnotifs')
+        }, 1000)
+        arr = []
+      } else {
+        notification.classList.add('cnotifs')
+        setTimeout(() => {
+          notification.classList.remove('cnotifs')
+        }, 1000)
+        arr = []
+        divArr = []
+      }
+      winScreen() // A function that checks if the user has won
+      loseScreen() // A function that checks if the user has lost
+    } else {
+      winScreen() //
+      loseScreen() //
     }
+  } else {
+  }
+}
 ```
 
 ---
+
+## Future Plans
+
+- The themes will be further be turned into categories which will include 3-4 themes for a picture category, 3-4 themes for a music category where the user will try to match the different sounds to each other.
+
+- There will be an option to add a timer for the user to challenge themselves to finish the puzzle under a specific amount of time.
+
+- Difficulty setting so that the images disappear much faster, making it harder for the user to remember the pictures.
 
 ## Technologies Used
 
