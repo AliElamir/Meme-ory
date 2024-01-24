@@ -2,7 +2,7 @@
 
 Find all the matching images before you run out of lives!
 
-Play the game here: https://meme-ory.surge.sh/
+Play the game here: [Meme-ory Game](https://meme-ory.surge.sh/)
 
 ## About the game
 
@@ -25,6 +25,26 @@ Choose your theme, number of images (size of your grid) you wish to complete, an
 Click on the boxes to reveal their contents, if the images do not match, they will be hidden. Make sure to remember them to match them with their other pairs later! Also, make sure you dont run out of lives.
 
 <img src="/images/homepage.png" alt="clickpic" width="680px"/>
+
+---
+
+## The Code Behind The Program:
+
+```
+    function nextQuestion() {
+        if (!gameEnded) {
+            const randomIdx = Math.floor(Math.random()* 10);
+            randomQuestion = questions[randomIdx];
+            const currentQuestion = randomQuestion.question;
+            const choices = randomQuestion.choices;
+            questionEl.innerHTML = currentQuestion;
+            for (let i = 0; i < choices.length; i++) {
+                const choiceEl = choicesEls[i];
+                choiceEl.innerHTML = choices[i];
+            }
+        }
+    }
+```
 
 ---
 
