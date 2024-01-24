@@ -2,7 +2,7 @@
 
 Find all the matching images before you run out of lives!
 
-Play the game here: [Meme-ory] (https://meme-ory.surge.sh/)
+Play the game here: https://meme-ory.surge.sh/
 
 ## About the game
 
