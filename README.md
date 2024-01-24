@@ -94,9 +94,11 @@ const removeClass = (selection) => {
 
 ---
 
-### Links
+### Links and credits
 
 Trello Board - [Meme-ory Trello Board](https://trello.com/b/N8h1hk13/meme-ory)
+
+Shuffling function -
 
 ### Contact
 
