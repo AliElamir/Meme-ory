@@ -4,7 +4,7 @@ Find all the matching images before you run out of lives!
 
 ## About the game
 
-Meme-ory is a memory based game where the user has to match images to complete a matching puzzle without running out of lives. The user chooses a theme of their choice along with their grid size if they want a tougher challenge.
+Meme-ory is a memory based game where the user has to complete a matching puzzle. The user chooses a theme of their choice along with their grid size if they want a tougher challenge.
 
 <img src="/images/gamepage.png" alt="memeorypic" width="680px"/>
 
@@ -12,19 +12,17 @@ Meme-ory is a memory based game where the user has to match images to complete a
 
 ## Goal of the game
 
-The user has to match two of the same image together, until they have matched all the images with each other.
-
-In addition to finding all the images, the user should aim to minimize the number of moves taken to maximize their score.
+The user has to match two of the same image together, until they have matched all the images with each other, without running out of lives.
 
 ---
 
 ## How to play
 
-Choose your theme, number of images you wish to complete, your difficulty and then click play!
+Choose your theme, number of images (size of your grid) you wish to complete, and then click play!
 
-Click on the boxes to reveal their contents.
+Click on the boxes to reveal their contents, if the images do not match, they will be hidden. Make sure to remember them to match them with their other pairs later! Also, make sure you dont run out of lives.
 
-<img src="/images/readmepics/click.png" alt="clickpic" width="400px"/>
+<img src="/images/homepage.png" alt="clickpic" width="400px"/>
 
 ---
 
