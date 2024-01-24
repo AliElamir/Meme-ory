@@ -1,8 +1,12 @@
 # Meme-ory
 
-Meme-ory is a memory based game where the user chooses a theme of their choice and has to complete a matching puzzle.
+Find all the matching images before you run out of lives!
 
-<img src="/images/readmepics/memeory.png" alt="memeorypic" width="680px"/>
+## About the game
+
+Meme-ory is a memory based game where the user has to match images to complete a matching puzzle without running out of lives. The user chooses a theme of their choice along with their grid size if they want a tougher challenge.
+
+<img src="/images/gamepage.png" alt="memeorypic" width="680px"/>
 
 ---
 
