@@ -1,0 +1,485 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 30fr 1fr;
+  grid-template-areas:
+    'header header header'
+    'side game aside'
+    'footer footer footer';
+  background-image: url('https://i.pinimg.com/564x/e5/46/cd/e546cd3b3caad43551879b89ad9c3844.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  overflow: hidden;
+}
+
+header {
+  grid-area: header;
+  background-image: url('https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?cs=srgb&dl=pexels-francesco-ungaro-281260.jpg&fm=jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 60px;
+  color: #00272b;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  border-bottom: solid #00272b;
+}
+
+aside {
+  margin: 0;
+  grid-area: aside;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://i.pinimg.com/564x/e5/46/cd/e546cd3b3caad43551879b89ad9c3844.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: solid #00272b;
+  border-top-left-radius: 0.5cm;
+  border-bottom-left-radius: 0.5cm;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  grid-area: side;
+  background-image: url('https://i.pinimg.com/564x/e5/46/cd/e546cd3b3caad43551879b89ad9c3844.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: solid #00272b;
+  border-top-right-radius: 0.5cm;
+  border-bottom-right-radius: 0.5cm;
+}
+
+footer {
+  height: 20px;
+  text-align: center;
+  background-image: url('https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?cs=srgb&dl=pexels-francesco-ungaro-281260.jpg&fm=jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: footer;
+  border-top: solid #00272b;
+}
+
+h1 {
+  line-height: 2vh;
+}
+
+main {
+  justify-self: center;
+  margin: 5px;
+  grid-area: game;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  width: 99%;
+  grid-gap: 5px;
+  justify-content: space-evenly;
+}
+
+div {
+  justify-self: center;
+  background-color: white;
+  height: 50px;
+  width: 100px;
+}
+
+.image1 {
+  background-color: blue;
+}
+
+.image2 {
+  background-color: green;
+}
+
+.image3 {
+  background-color: rgb(251, 255, 0);
+}
+
+.image4 {
+  background-color: rgb(128, 0, 79);
+}
+
+button {
+  margin: 50px;
+}
+
+.cartoon1 {
+  background-image: url('https://i.pinimg.com/564x/d6/45/91/d6459174d0fc753a310659f009eeb526.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.cartoon2 {
+  background-image: url('https://i.pinimg.com/564x/14/22/64/142264cb21ae4560d223c8af2602d755.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.cartoon3 {
+  background-image: url('https://i.pinimg.com/564x/99/67/e2/9967e29de91eec0c588d90bee0f6b4ef.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.cartoon4 {
+  background-image: url('https://i.pinimg.com/564x/23/32/04/233204ab8e2271267b3e571a56a41d46.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+.cartoon5 {
+  background-image: url('https://i.pinimg.com/564x/33/e6/f5/33e6f5d51852373d1c9ec042afbc51f9.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.cartoon6 {
+  background-image: url('https://i.pinimg.com/564x/97/1e/b6/971eb6de77fa7169ef8c85ca584f59c8.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.cartoon7 {
+  background-image: url('https://i.pinimg.com/564x/4a/eb/29/4aeb29d62c53f2b16c797ef7472e1461.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.cartoon8 {
+  background-image: url('https://i.pinimg.com/564x/7b/b7/73/7bb77319c6d76285c13e768d16267a8d.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.animal1 {
+  background-image: url('https://lafeber.com/pet-birds/wp-content/uploads/2018/06/Cockatiel-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.animal2 {
+  background-image: url('https://i.pinimg.com/originals/bb/8d/55/bb8d553a3f42b99208ea14d07d6aa05a.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.animal3 {
+  background-image: url('https://i.redd.it/xh4xvvx22yt41.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.animal4 {
+  background-image: url('https://hips.hearstapps.com/hmg-prod/images/chipmunk-nature-photos-1537973822.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.animal5 {
+  background-image: url('https://i.pinimg.com/originals/2a/9e/f0/2a9ef06d820e00998adbe0d6566ccc19.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.animal6 {
+  background-image: url('https://i.pinimg.com/736x/53/b5/7c/53b57cd3381d60640b70cbb7f452112e.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.animal7 {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIqCyuzsVx2w7g7meU0iKt2DbuBWZKD6l6zA&usqp=CAU');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.animal8 {
+  background-image: url('https://media.istockphoto.com/id/162136091/photo/kangaroo-posing-very-much-like-a-human.jpg?s=612x612&w=0&k=20&c=FnL_NkiYXws3H28U8I1H5JAEtAaeYOcIFe3TJYer8xc=');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.wonders1 {
+  background-image: url('https://i0.wp.com/arabscountries.com/wp-content/uploads/2021/01/Hanging-Gardens-of-Babylon-1.jpg?resize=660%2C490&ssl=1');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.wonders2 {
+  background-image: url('https://www.thoughtco.com/thmb/y2yphoYGkvjdV1JcVfGFJucHK1E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/inigoarza-5c72cffe46e0fb0001b68224.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.wonders3 {
+  background-image: url('https://cdn.mos.cms.futurecdn.net/BiNbcY5fXy9Lra47jqHKGK-1200-80.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.wonders4 {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/bd/Taj_Mahal%2C_Agra%2C_India_edit3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.wonders5 {
+  background-image: url('https://www.shoreexcursionsgroup.com/img/tour/CAPRCHICHENITZA2-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.wonders6 {
+  background-image: url('https://ehsanbayat.com/wp-content/uploads/2023/08/bahrain-world-trade-center-scaled.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.wonders7 {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.wonders8 {
+  background-image: url('https://i0.wp.com/www.touristjordan.com/wp-content/uploads/2023/02/shutterstock_1490981186-scaled.jpg?fit=4000%2C2751&ssl=1');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.anime1 {
+  background-image: url('https://64.media.tumblr.com/62aef3d82175d80f1d62225b9b32e630/a64a834c44e1bf60-10/s540x810/42e0e24a2d1bc0b350d7e37fca51742b124a6115.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.anime2 {
+  background-image: url('https://media1.tenor.com/m/qCbx8Zp1LnIAAAAd/anime-anime-funny.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.anime3 {
+  background-image: url('https://media1.tenor.com/m/H63Kb7qg8HoAAAAC/anime-chainsaw.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.anime4 {
+  background-image: url('https://i.pinimg.com/originals/10/52/b8/1052b889f94c009f7e5059cb1e38cc8e.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.anime5 {
+  background-image: url('https://i.pinimg.com/originals/14/cc/ef/14ccef1a5384c184766a966eb7d03e68.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.anime6 {
+  background-image: url('https://i.pinimg.com/originals/7c/e6/8c/7ce68c8e9b2018de22d7ceedb0bac416.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.anime7 {
+  background-image: url('https://i.pinimg.com/originals/ed/04/ea/ed04eadedc0bb84ef39728ae6fe367c0.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.anime8 {
+  background-image: url('https://i.pinimg.com/originals/c8/6d/9d/c86d9d58ec5bacf269f375daedbb1b36.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.black {
+  background-color: #00272b;
+  background-image: url('https://prnt.sc/asZar9xBjC2k');
+  background-size: cover; /* or background-size: 100% 100%; depending on your preference */
+  height: 100%;
+  width: 100%;
+  border-radius: 0.25cm;
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+
+.loseStyle {
+  display: none;
+  position: absolute;
+  background-image: url('/images/lose background.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  line-height: 180vh;
+  color: white;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 50px;
+  max-height: 100%;
+}
+
+.winStyle {
+  display: none;
+  position: absolute;
+  background-image: url('https://i.imgur.com/UA7i752.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  line-height: 180vh;
+  color: white;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 50px;
+  max-height: 100%;
+}
+
+a {
+  color: #00272b;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}
+
+.life {
+  font-size: 30px;
+  color: #00272b;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}
+
+.notifs {
+  color: #00272b;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}
+
+.wnotifs {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/011/148/558/non_2x/right-and-wrong-vector-design-illustration-isolated-on-transparent-background-free-png.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100%;
+}
+
+.cnotifs {
+  background-image: url('https://image.similarpng.com/very-thumbnail/2020/11/Hand-drawn-correct-icon-on-transparent-background-PNG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100%;
+}

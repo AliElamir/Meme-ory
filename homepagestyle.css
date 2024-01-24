@@ -1,0 +1,122 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100vh;
+  background-color: #ffcf9c;
+  background-image: url('https://i.pinimg.com/originals/f2/ec/34/f2ec34e2c8457542c1ea56fe00e1c49e.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cyanbg {
+  font-size: 4vw;
+  font-weight: bold;
+  color: #ca054d;
+  font-family: 'Grape Nuts', cursive;
+  position: absolute;
+  top: 0;
+  width: 55%;
+  height: 15vh;
+  background-color: rgb(176, 212, 187);
+  border-bottom: solid black;
+  border-right: solid black;
+  border-left: solid black;
+  border-bottom-left-radius: 10cm;
+  border-bottom-right-radius: 10cm;
+}
+
+#themeSelection {
+  display: flex;
+  justify-content: space-around;
+  margin: 1vh;
+  grid-gap: 10%;
+}
+
+.themes {
+  background-color: #ffcf9c;
+  color: #3b1c32;
+  border: solid #000000;
+  font-size: 1.2vw;
+  font-weight: bold;
+  border-radius: 2cm;
+  height: 10vh;
+  line-height: 10vh;
+  width: 15vw;
+  font-family: 'comfortaa', cursive;
+  cursor: pointer;
+}
+
+#sizeSelection {
+  display: flex;
+  justify-content: space-around;
+  grid-gap: 10%;
+  margin: 1vh;
+}
+
+.size {
+  background-color: #ffcf9c;
+  color: #3b1c32;
+  border: solid black;
+  font-size: 1.2vw;
+  font-weight: bold;
+  border-radius: 2cm;
+  height: 10vh;
+  line-height: 10vh;
+  width: 15vw;
+  font-family: 'comfortaa', cursive;
+  cursor: pointer;
+}
+
+.themes:hover,
+.size:hover {
+  background-color: rgba(211, 155, 95, 0.8);
+}
+
+.themes:active,
+.size:active {
+  border-color: rgba(130, 95, 211, 0.8);
+  background-color: white;
+}
+
+button {
+  display: none;
+  background-color: #32d174;
+  color: #c97090;
+  font-size: 1.5vw;
+  border-radius: 15cm;
+  height: 7.5vh;
+  line-height: 7.5vh;
+  width: 10vw;
+  position: absolute;
+  bottom: 5%;
+  text-decoration: none;
+}
+
+button a:link,
+button a:visited {
+  color: #3b1c32;
+  text-decoration: none;
+  font-family: 'climate crisis', cursive;
+}
+
+button:hover {
+  background-color: #1ea858;
+}
+
+h2 {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #3b1c32;
+  font-family: 'Grape Nuts', cursive;
+}
+
+.clicked {
+  background-color: rgba(211, 155, 95, 0.8);
+}
