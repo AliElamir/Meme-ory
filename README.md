@@ -98,7 +98,7 @@ const removeClass = (selection) => {
 
 Trello Board - [Meme-ory Trello Board](https://trello.com/b/N8h1hk13/meme-ory)
 
-Shuffling function -
+Shuffling function - KhaledHassan [Shuffle Function](https://medium.com/@khaledhassan45/how-to-shuffle-an-array-in-javascript-6ca30d53f772)
 
 ### Contact
 
