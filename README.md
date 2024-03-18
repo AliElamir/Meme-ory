@@ -8,6 +8,7 @@ Play the game here: [Meme-ory Game](https://meme-ory.surge.sh/)
 
 Meme-ory is a memory based game where the user has to complete a matching puzzle. The user chooses a theme of their choice along with their grid size if they want a tougher challenge.
 
+<img src="https://i.imgur.com/n6xsTxu.png" alt="memeorypic" width="680px"/>
 <img src="/images/gamepage.png" alt="memeorypic" width="680px"/>
 
 ---
