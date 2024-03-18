@@ -31,7 +31,7 @@ Click on the boxes to reveal their contents, if the images do not match, they wi
 
 ## Learnings and the Code Behind The Program:
 
-DOM manipulation and being able to compare element's classes with each other in order to create a logic to hiding and revealing their contents. Below is the main logic of the code, along with it are comments explaining the steps.
+DOM manipulation and being able to compare element's classes with each other in order to create a logic for hiding and revealing their contents. Below is the main logic of the code, along with it are comments explaining the steps.
 
 ```
 // The removeClass function handles uncovering contents of the users selection by removing the cover class 'black'//
