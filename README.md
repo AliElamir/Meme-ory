@@ -81,7 +81,7 @@ const removeClass = (selection) => {
 
 ## Future Plans
 
-- The themes will be further be turned into categories which will include 3-4 themes for a picture category, 3-4 themes for a music category where the user will try to match the different sounds to each other.
+- The themes will be further turned into categories which will include 3-4 themes for a picture category, 3-4 themes for a music category where the user will try to match the different sounds to each other.
 
 - There will be an option to add a timer for the user to challenge themselves to finish the puzzle under a specific amount of time.
 
